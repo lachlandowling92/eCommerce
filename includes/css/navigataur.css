@@ -1,0 +1,149 @@
+/* ======================================================================================================
+ * Navigataur: A pure CSS responsive navigation menu
+ * Author: Mike King (@micjamking)
+ * Last Edited by Carley Payne on 28th November 2013
+=======================================================================================================*/
+
+/* ======================================================================================================
+Functional Styles (Required)
+=======================================================================================================*/
+/* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
+body { 
+	-webkit-animation: bugfix infinite 1s; 
+}
+
+@-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+.header { 
+	position: relative; 
+}
+
+#toggle, .toggle { 
+	display: none; 
+}
+
+.menu > li { 
+	list-style: none; 
+	float:left;	
+}
+
+/* Nicolas Gallagher micro clearfix */
+.clearfix:before, .clearfix:after { 
+	display: table; 
+	content: ""; 
+}
+
+.clearfix:after { 
+	clear: both; 
+}
+
+/* =================  Tablet ================= */
+@media only screen and (max-width: 768px){
+	.menu { 
+		display: none; 
+		opacity: 0; 
+		width: 100%; 
+		position: absolute; 
+		right: 0; 
+	}
+	
+	.menu > li { 
+		display: block; 
+		width: 100%; 
+		margin: 0; 
+	}
+	
+	.menu > li > a { 
+		display: block; 
+		width: 100%; 
+		text-decoration: none; 
+		-webkit-box-sizing: border-box; 
+		-moz-box-sizing: border-box; 
+		box-sizing: border-box; 
+	}
+	
+	.toggle { 
+		display: block; 
+		position: relative; 
+		cursor: pointer; 
+		-webkit-touch-callout: none; 
+		-webkit-user-select: none; 
+		user-select: none; 
+	}
+	
+	#toggle:checked ~ .menu { 
+		display: block; 
+		opacity: 1;
+	}
+}
+
+/* ======================================================================================================
+Presentation Styles (Editable)
+=======================================================================================================*/
+.nav { 
+	display: block; 
+	float: right; 
+}
+
+.nav, .menu, .menu > li, .menu > li > a { 
+	height: 100%; 
+}
+
+.toggle { 
+	z-index: 2; 
+}
+
+/* =================  Tablet ================= */
+@media only screen and (max-width: 770px){	
+	.menu, .menu > li, .menu > li > a{
+		height: auto;
+	}
+	
+	.toggle:after {
+		content: 'Menu';
+		display: block;
+		width: 200px;
+		margin: 33px 0;
+		padding: 10px 20px;
+		background: #34612a;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		text-align: center;
+		font-size: 12px;
+		color: #FFFFFF;
+		-webkit-transition: all 0.5s linear;
+		-moz-transition: all 0.5s linear;
+		-o-transition: all 0.5s linear;
+		transition: all 0.5s linear;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box; 
+	}
+	
+	.toggle:hover:after {
+		background: #34612a;
+	}
+	
+	#toggle:checked + .toggle:after {
+		content: 'Close Menu';
+	}
+	
+	.menu li ul li {
+		display: visible;
+	}
+}
+
+/* =================  Mobile ================= */
+@media only screen and (max-width: 360px){
+	.header > h1 { 
+		text-align: center;
+	}
+	
+	.header > h1, .nav, .toggle:after { 
+		float: none; 
+	}
+	
+	.toggle:after { 
+		text-align: center; width: 90%; 
+	}
+}

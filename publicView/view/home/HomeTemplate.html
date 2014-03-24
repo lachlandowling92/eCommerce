@@ -1,0 +1,20 @@
+<form action="?search" method="post">
+  <input type="text" name="searchTerm"></input>
+  <select name="category">
+    <option value='test'>Test</option>
+    <option>Test2</option>
+  </select>
+  <input type="submit" value="Search items for sale"></input>
+</form>
+
+<?php
+print_r($_POST);
+print_r($_GET);
+ foreach ($items as $item) {
+  echo $item->getItemTitle();
+  echo '</br>';
+  echo $item->getItemSubtitle();
+
+  echo '<img height=100 width= 100 src ="' . SITEROOT . '/includes/img/' . $item->getItemImageLink() . '"">';
+
+ }

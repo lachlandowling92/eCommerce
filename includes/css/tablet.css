@@ -1,0 +1,193 @@
+/* ======================================================================================================
+Tablet (Portrait) < 768px
+=======================================================================================================*/
+@media only screen and (max-width: 770px) {
+	/* ================= General structure ================= */
+	/* Created by Carley Payne */
+	html {
+		width: auto !important;
+		overflow-x: hidden !important;
+	}
+	
+	/* Created by Carley Payne */
+	body {
+		width: auto !important;
+	}
+	
+	/* Created by Emma Barry */
+	.container {
+		width:70%;
+	}
+		
+	/* ================= Header and logo ================= */
+	/* Created by Emma Barry */
+	.header_bg .logo {
+		margin-top: 10px;
+		padding-left: auto;
+		padding-right: auto;
+	}
+	
+	/* ================= Menu ================= */
+	/* Created by Carley Payne */
+	.main-menu {
+		margin: -30px 0 -10px 0;
+		padding-left: auto;
+		padding-right: auto;
+		width: 90%;
+	}
+	
+	/* Created by Carley Payne */
+	.main-menu ul {
+		position: static !important;
+		padding: 0 !important;
+		float: none !important;
+		padding-bottom: 10px !important;
+	}
+
+	/* Created by Carley Payne */
+	.main-menu li {
+		box-shadow: none !important;
+		border: 0 !important;
+		border-top: 1px solid #d9d9d9 !important;
+		display: block !important;
+		float: none !important;
+		margin: 0 !important;
+	}
+
+	/* Created by Carley Payne */
+	.main-menu li.submenu > a {
+		cursor: pointer;
+	}
+
+	/* Created by Carley Payne */
+	.main-menu li a {
+		padding: 0 16px;
+		line-height: 33px;
+		background: none !important;
+	}
+
+	/* Created by Carley Payne */
+	.main-menu li ul li a {
+		padding-left: 32px !important;
+		background: none !important;
+	}
+
+	/* Created by Carley Payne */
+	.main-menu li ul {
+		display: block !important;
+	}
+	
+	/* ================= Content ================= */
+	/* Edited by Carley Payne */
+	#mainContent {
+		max-width: 770px !important;
+		min-width: 361px;
+	}
+	
+	/* Edited by Carley Payne */
+	#content {
+		width: 90%;
+		padding: 5%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/* Created by Emma Barry and edited by Carley Payne */
+	#pageContent {
+		width: 90%;
+		padding: 5%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
+	/* ================= Sidebar ================= */
+	/* Created by Carley Payne */
+	#contactSteph {
+		display: none;
+	}
+	
+	/* Created by Emma Barry */
+	#quote, #slideshow {
+		display: none;
+	}
+
+	/* ================= Videos on Home ================= */	
+	/* Created by Emma Barry and edited by Carley Payne */
+	#latestVidsText{
+		width: 100%;
+		float: none;
+		display: block;
+		clear: both;
+	}
+	
+	/* Created by Emma Barry and edited by Carley Payne */
+	iframe {
+		float: left;
+		display: block;
+		clear: both;
+	}
+	
+	/* Created by Emma Barry and edited by Carley Payne */
+	#latestVideos {
+		width: 90%;
+		padding: 5%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/* ================= Footer ================= */
+	/* Created by Carley Payne */
+	#col-wrapper {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+
+	/* Created by Carley Payne */
+	.footer-col-1 {
+		width: 33%;
+		float: left;
+		text-align: left;
+		margin-left: 5%;
+		display: inline-block;
+	}
+
+	/* Created by Carley Payne */
+	.footer-col-2 {
+		width: 33%;
+		float: left;
+		text-align: left;
+		display: inline-block;
+	}
+
+	/* Created by Carley Payne */
+	.footer-col-3 {
+		width: 23%;
+		float: left;
+		text-align: left;
+		display: inline-block;
+	}
+	
+	/* Created by Emma Barry and edited by Carley Payne */
+	#copyright{
+		background: #22471b;
+		text-align: center;
+		border-style:solid;
+		display: inline-block;
+		width: 100%;
+		padding: 5px 0px 5px 0px;
+		color: #fff;
+		margin-top: -20px;
+		max-height: 20px;
+	}
+
+	/* Created by Carley Payne */
+	#footerMenu {
+		text-align: center;
+		background: #34612a;
+		display: inline-block;
+		width: 100%;
+		padding-top: 18px;
+	}
+}

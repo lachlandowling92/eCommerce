@@ -1,0 +1,838 @@
+/* ======================================================================================================
+ GENERAL STRUCTURE
+=======================================================================================================*/
+/* ================= 1. CSS Reset ================= */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-family: Helvetica, Arial, Tahoma, sans-serif;
+}
+
+/* ================= General tags ================= */
+body {
+	font: 12px/1.7 Helvetica, Arial, Tahoma, sans-serif;
+	color: #666666;
+	-webkit-font-smoothing: antialiased;
+	background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Helvetica, Arial, Tahoma, sans-serif;
+	margin-bottom: 12px;
+	font-weight: 600;
+}
+
+/*  Created by Lachlan Dowling  */
+h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, p.center {
+	text-align: center;
+}
+
+#center {
+	text-align: center;
+	display:inline-block;
+	width:100%;
+}
+
+a:link, a:visited, a:hover, a:active, a:focus {
+	text-decoration: none;
+	outline: none;
+	font-family: Helvetica, Arial, Tahoma, sans-serif;
+}
+
+a {
+	color: #d93e39;
+	font-family: Helvetica, Arial, Tahoma, sans-serif;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	color: #74665b;
+	font-size: 12px;
+	font-family: Helvetica, Arial, Tahoma, sans-serif;
+	line-height: 22px;
+}
+
+dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset, blockquote, article, p {
+	margin-bottom: 20px;
+}
+
+/* ================= Headers ================= */
+h1 {
+	font-size: 25px;
+	color: #453C34;
+}
+
+h2 {
+	font-size: 22px;
+	color: #453C34;
+}
+
+h3 {
+	font-size: 18px;
+	color: #453C34;
+}
+
+h4 {
+	font-size: 16px;
+	color: #453C34;
+}
+
+h5 {
+	font-size: 14px;
+	color: #453C34;
+}
+
+h6 {
+	font-size: 12px;
+	color: #453C34;
+}
+
+h1.white, h2.white, h3.white, h4.white, h5.white, h6.white {
+	color: #fff;
+}
+
+/* ================= List Styles ================= */
+ul {
+	list-style: none;
+	margin-top: 0;
+}
+
+ol {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+ol, ol li {
+	list-style: decimal outside;
+}
+
+/* ================= Images ================= */
+img.alignleft {
+	float: left;
+	margin: 10px 16px 10px 0;
+}
+
+img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.alignright {
+	float: right;
+	margin: 5px 0px 5px 11px;
+}
+
+/* ================= Dividers ================= */
+hr {
+	background: transparent;
+	border: 0;
+	clear: both;
+	color: transparent;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+}
+
+hr {
+	background: #d9d9d9;
+	color: #d9d9d9;
+	margin:5px 0 25px 0;
+}
+
+/* ================= Header and Logo ================= */
+/* Created by Carley Payne */
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/* Edited by Carley Payne */
+.header_bg {
+	min-height: 100px;
+	background: #79aa61; /* For old browsers */
+	background: -moz-linear-gradient(top, #79aa61 0%, #94d076 40%, #94d076 60%, #79aa61 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#79aa61), color-stop(40%,#94d076), color-stop(60%,#94d076), color-stop(100%,#79aa61)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #79aa61 0%,#94d076 40%,#94d076 60%,#79aa61 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #79aa61 0%,#94d076 40%,#94d076 60%,#79aa61 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #79aa61 0%,#94d076 40%,#94d076 60%,#79aa61 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #79aa61 0%,#94d076 40%,#94d076 60%,#79aa61 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79aa61', endColorstr='#79aa61',GradientType=0 ); /* IE6-9 */
+}
+
+/* Edited by Carley Payne */
+.header_bg .logo {
+	float: left;
+	margin-bottom: 10px;
+	margin-top: 40px;
+}
+
+/* ================= Header Menu ================= */
+/* Edited by Carley Payne */
+.main-menu {
+	margin: 50px 0px 0px -20px;
+	float: right;
+	width: 77%;
+}
+
+.main-menu ul {
+	margin: 0;
+	float: right;
+}
+
+.main-menu li {
+	white-space: nowrap;
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	z-index: 100;
+}
+
+/* Edited by Carley Payne */
+.main-menu a {
+	display: block;
+	position: relative;
+	font-size: 13px;
+	font-family: "Helvetica neue", Arial, sans-serif;
+	color: #f1f1f1;
+	font-weight: bold;
+}
+
+/* Edited by Carley Payne */
+.main-menu a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.main-menu > ul > li {
+	float: left;
+	margin-right: 23px;
+}
+
+.main-menu li ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	z-index: 100;
+}
+
+.main-menu li:hover > ul {
+	display: block;
+}
+ 
+/* Edited by Carley Payne */
+.main-menu li ul li a {
+	padding: 0 25px 0 12px;
+	line-height: 33px;
+	background: #22471b;
+}
+
+/* ================= Footer ================= */
+/* Edited by Carley Payne */
+.footer_bg {
+	border-top: 10px solid #d93e39;
+	background: #2a3062;
+	margin-top: 60px;
+}
+
+/* ================= Content ================= */
+/* Edited by Carley Payne */
+.content {
+	width: 620px;
+	margin: 25px 40px 0 0;
+	float: left;
+} 
+
+/* ======================================================================================================
+SMASH DESIGN CSS
+=======================================================================================================*/
+/* ================= Slideshow ================= */
+/* Created by Emma Barry and edited by Carley Payne */
+#slideshowContent {
+	background: #34612a;
+	float: none;
+	display: inline-block; 
+	width: 100%;
+	padding-top: 20px;
+}
+
+/* ================= Content ================= */
+/* Created by Emma Barry and edited by Carley Payne */
+#mainContent {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+	min-width: 600px;
+	padding-top: 20px;
+	min-height: 600px;
+}
+
+/* Created by Emma Barry and edited by Carley Payne */
+#pageContent {
+	display: block;
+	width: 70%;
+	float: left;
+	padding-right: 5%;
+}
+
+
+/* Created by Carley Payne */
+#content {
+	width: 100%;
+	float: left;
+	padding-right: 5%;
+}
+
+/* ================= Side Bar ================= */
+/* Created by Carley Payne */
+#quote{
+	width: 20%;
+	float: right;
+	margin-top: 60px;
+	background: #f5f5f5;
+	border-radius: 10px;
+	padding-top: 20px !important;
+	padding: 15px;
+}
+
+/* Created by Carley Payne */
+#contactSteph{
+	width: 20%;
+	float: right;
+	padding: 15px;
+}
+
+/* ================= Videos ================= */
+/* Created by Emma Barry and edited by Carley Payne */
+#latestVideos {
+	display: block;
+	width: 70%;
+	float: left;
+	padding-right: 5%;
+}
+
+/* Created by Emma Barry and edited by Carley Payne */
+iframe {
+	display: block;
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+
+/* Created by Emma Barry */
+#firstVideoContent {
+	float: right;
+	padding-right: 5px;
+}
+
+/* ================= Footer ================= */
+/* Created by Emma Barry and edited by Carley Payne */
+#copyright {
+	background: #22471b;
+	text-align: center;
+	border-style:solid;
+	display: inline-block;
+	width: 100%;
+	padding: 5px 0px 5px 0px;
+	color: #fff;
+	margin-top: -20px;
+	max-height: 20px;
+}
+
+/* Created by Emma Barry and edited by Carley Payne */
+#footerMenu {
+	text-align: center;
+	background: #34612a;
+	display: inline-block;
+	width: 100%;
+	padding-top: 18px;
+}
+
+/* Created by Carley Payne */
+#footerMenu a, #copyright p {
+	color: #fff !important;
+}
+
+/* Created by Carley Payne */
+#col-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+}
+
+/* Created by Carley Payne */
+.footer-col-1 {
+	width: 33%;
+	float: left;
+	text-align: left;
+	margin-left: 7%;
+	display: inline-block;
+}
+
+/* Created by Carley Payne */
+.footer-col-2 {
+	width: 33%;
+	float: left;
+	text-align: left;
+	display: inline-block;
+}
+
+/* Created by Carley Payne */
+.footer-col-3 {
+	width: 21%;
+	float: left;
+	text-align: left;
+	display: inline-block;
+}
+
+/* ================= Blog and Store ================= */
+/* Created by Lachlan Dowling */
+#blogContainer {
+	width: 60%;
+	min-height: 300px;
+	float: left;
+	margin-top: 20px;
+	display: inline-block;
+} 
+
+/* Created by Lachlan Dowling */
+#singleBlogContainer {
+	width: 100%;
+	min-height: 300px;
+	float: left;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+/* Created by Lachlan Dowling */
+#blogContent {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Created by Lachlan Dowling */
+#loginCont {
+	width: 100%;
+	height: 600px;
+}
+
+/* Created by Lachlan Dowling */
+#loginRegisterForm {
+	width: 35%;
+	height: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+}	
+
+/* Created by Lachlan Dowling */
+#loginFormLabel {
+	width: 30%;
+	float: left;
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 20%;
+} 
+
+/* Created by Lachlan Dowling */
+#loginFormInput {
+	width: 30%;
+	float: left;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+/* Created by Lachlan Dowling */
+#centered {
+	text-align: center;
+	margin-top: 10px;
+	display: inline-block;
+	width: 100%;
+}
+
+/* Created by Lachlan Dowling */
+#centeredContent {
+	height: auto;
+	text-align: center;
+}
+
+/* Created by Lachlan Dowling */
+#sideContainer {
+	float: right;
+	width: 300px;
+	min-height: 150px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+	display: inline-block;
+}
+
+/* Created by Lachlan Dowling */
+#header {
+	padding-top: 10px;
+}
+
+/* Created by Lachlan Dowling */
+#userDisplayPic {
+	float: left;
+	width: 100px;
+}
+
+/* Created by Lachlan Dowling */
+#userInfo {
+	width: 200px;
+	float: right;
+	height: 110px;
+}
+
+/* Created by Lachlan Dowling */
+#monthLinks {
+	display: inline-block;
+	width: 100%;
+	margin-left: 10%;
+	margin-top: 10px;
+	padding-bottom: 15px;
+}
+
+/* Created by Lachlan Dowling */
+.blogPost {
+	margin-left: 5%;
+	border-bottom: 1px solid;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+/* Created by Lachlan Dowling */
+h1.center, h4.center, p.center {
+	text-align: center;
+}
+
+/* Created by Lachlan Dowling */
+#blogComments {
+	width: 100%;
+	min-height: 100px;
+	float: left;
+}
+
+/* Created by Lachlan Dowling */
+textarea {
+	resize:none;
+}
+
+/* Created by Lachlan Dowling */
+#userCommentInfo {
+	width: 90%;
+	display: inline-block;
+	float: right;
+	min-height: 100px
+}
+
+/* Created by Lachlan Dowling */
+#userImage {
+	width: 15%;
+	display: inline-block;
+	float: left;
+	height: 100%;
+}
+
+/* Created by Lachlan Dowling */
+#commentBox {
+	width: 100%;
+	display: inline-block;
+	margin-left: 10%;
+	margin-bottom: 15px;
+}
+
+/* Created by Lachlan Dowling */
+#commentContainer {
+	width: 100%;
+	min-height: 50px;
+}
+
+/* Created by Lachlan Dowling */
+#blogStatusPending {
+	width: 100%;
+	height: 85px;
+	text-align: center;
+	background-color: #FFD663;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+
+/* Created by Lachlan Dowling */
+#blogStatusPublished {
+	width: 100%;
+	height: 85px;
+	text-align: center;
+	background-color: #ADD665;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+
+/* Created by Lachlan Dowling */
+#blogStatusUnpublished {
+	width: 100%;
+	height: 85px;
+	text-align: center;
+	background-color: #F74A3E;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+
+/* Created by Lachlan Dowling */
+#changedPasswordSuccess {
+	width: 100%;
+	background-color: #ADD665;
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Created by Lachlan Dowling */
+.linkBtn {
+	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	box-shadow: inset 0px 1px 0px 0px #ffffff;
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background: -moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color: #ededed;
+	-webkit-border-top-left-radius: 20px;
+	-moz-border-radius-topleft: 20px;
+	border-top-left-radius: 20px;
+	-webkit-border-top-right-radius: 20px;
+	-moz-border-radius-topright: 20px;
+	border-top-right-radius: 20px;
+	-webkit-border-bottom-right-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	border-bottom-right-radius: 20px;
+	-webkit-border-bottom-left-radius: 20px;
+	-moz-border-radius-bottomleft: 20px;
+	border-bottom-left-radius: 20px;
+	text-indent: 0;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	color: #777777;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	font-style: normal;
+	height: 50px;
+	line-height: 50px;
+	width: 100px;
+	text-decoration: none;
+	text-align: center;
+	text-shadow: 1px 1px 0px #ffffff;
+}
+
+/* Created by Lachlan Dowling */
+.linkBtn:hover {
+	background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background: -moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color: #dfdfdf;
+}
+
+/* Created by Lachlan Dowling */
+.linkBtn:active {
+	position: relative;
+	top: 1px;
+}
+
+/* Created by Lachlan Dowling */
+#blogMainCont {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	min-height: 900px;
+}
+
+/* Created by Lachlan Dowling */
+#storeContainer {
+	min-height: 700px;
+}
+
+/* Created by Lachlan Dowling */
+#storeItem {
+	width: 50%;
+	min-height: 150px;
+	float: left;
+	display: inline-block;
+}
+
+/* Created by Lachlan Dowling */
+#storeImage {
+	width: 30%;
+	height: 100px;
+	float: left;
+	display: inline-block;
+}
+
+/* Created by Lachlan Dowling */
+#storeDescription {
+	width: 70%;
+	height: 100px;
+	float: right;
+	display: inline-block;
+}
+
+/* Created by Lachlan Dowling */
+#blogMainCont {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* Created by Lachlan Dowling */
+#storeContainer {
+	min-height: 700px;
+}
+
+/* Created by Lachlan Dowling */
+#storeItem {
+	width: 50%;
+	min-height: 150px;
+	float: left;
+	display: inline-block;
+}
+
+/* Created by Lachlan Dowling */
+#storeImage {
+	width: 30%;
+	height: 100px;
+	float: left;
+	display: inline-block;
+}
+
+/* Created by Lachlan Dowling */
+#storeDescription {
+	width: 70%;
+	height: 100px;
+	float: right;
+	display: inline-block;
+}
+
+/* Created by Lachlan Dowling */
+#userInfo2 {
+	width: 100%;
+	background-color: #EEFA82;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	padding-top: 20px;
+	padding-bottom:20px;
+	border: 1px solid black;
+}
+
+/* Created by Lachlan Dowling */
+#userDisplayImage {
+	width: 10%;
+	height: 100px;
+	float: left;
+	display: inline-block;
+	margin-left: 25%;
+}
+
+/* Created by Lachlan Dowling */
+#testIdLockie {
+	width: 60%;
+	min-height: 100px;
+	display: inline-block;	
+}
+
+/* Created by Lachlan Dowling */
+#storeReviewsBtn {
+	width: 100%;
+	height: 35px;
+	background-color: #D1D1D1;
+	text-align: right;
+	padding-top: 10px;
+	margin-bottom: 20px;
+}
+
+/* Created by Lachlan Dowling */
+#review {
+	width: 100%;
+	min-height: 100px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+/* Created by Lachlan Dowling */
+#reviewDetails {
+	width: 85%;
+	height: 100%;
+	float: left;
+	display: inline-block;
+}
+
+/* Created by Lachlan Dowling */
+#reviewContainer {
+	width: 100%;
+	min-height: 300px;
+}	
+
+/* Created by Lachlan Dowling */
+#itemImage {
+	width: 40%;
+	float: left;
+	display: inline-block;
+}
+
+/* Created by Lachlan Dowling */
+#itemDescription {
+	width: 60%;
+	min-height: 300px;
+	float: left;
+	display: inline-block;
+}
+
+/* ================= Videos ================= */
+/* Created By Emma Barry */
+#featuredVideo {
+width: 873px;
+height: 491px;
+margin-left: -23px;
+margin-top: 0px;
+}
+
+/* Created By Emma Barry */
+#videoTable {
+	display: inline-block;
+	height: auto;
+	width: 160px;
+	float: right;
+	width: 40%;
+}
+
+/* Created By Emma Barry */
+#videoTable > a > img{
+	height: auto;
+	width: 160px;
+}
+ 
+/* Created By Emma Barry */
+#mobileFeaturedVideo { 
+	display: none; 
+}
+
+/* Created By Emma Barry */
+#videos{
+	
+}
+
+/* Created By Emma Barry */
+#videoDescription{
+	display: inline-block;
+}
+
+/* Created By Emma Barry */
+#video{
+	display: inline-block;
+	float: left;
+}
